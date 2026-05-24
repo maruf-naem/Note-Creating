@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+
+    background: linear-gradient(135deg, #c79cff, #9ab8ff);
+
+    padding-top: 50px;
+}
+
+/* CONTAINER */
+
+.container {
+    width: 100%;
+    max-width: 700px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+/* TITLE */
+
+.textdiv {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.textdiv img {
+    width: 55px;
+}
+
+.textdiv h2 {
+    color: white;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+/* BUTTON */
+
+.btndiv {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 10px;
+
+    width: fit-content;
+
+    padding: 14px 24px;
+
+    border-radius: 50px;
+
+    background: linear-gradient(180deg, #a63dff, #6f00ff);
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(111, 0, 255, 0.35);
+
+    transition: 0.3s ease;
+}
+
+.btndiv:hover {
+    transform: translateY(-2px);
+}
+
+.btndiv img {
+    width: 20px;
+}
+
+.btndiv h3 {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* NOTES */
+
+.notediv {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* SINGLE NOTE */
+
+.input {
+    position: relative;
+}
+
+/* TEXTAREA */
+
+.input textarea {
+    width: 100%;
+    min-height: 120px;
+
+    border: none;
+    outline: none;
+
+    resize: none;
+
+    border-radius: 6px;
+
+    padding: 20px 55px 20px 20px;
+
+    font-size: 16px;
+    line-height: 1.6;
+
+    color: #444;
+
+    background: white;
+
+    box-shadow:
+        0 6px 16px rgba(0,0,0,0.08);
+}
+
+/* DELETE */
+
+.input img {
+    width: 22px;
+
+    position: absolute;
+
+    right: 18px;
+    bottom: 18px;
+
+    cursor: pointer;
+
+    opacity: 0.7;
+
+    transition: 0.3s ease;
+}
+
+.input img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 35px 16px;
+    }
+
+    .container {
+        gap: 20px;
+    }
+
+    /* TITLE */
+
+    .textdiv img {
+        width: 45px;
+    }
+
+    .textdiv h2 {
+        font-size: 34px;
+    }
+
+    /* BUTTON */
+
+    .btndiv {
+        padding: 12px 20px;
+    }
+
+    .btndiv img {
+        width: 18px;
+    }
+
+    .btndiv h3 {
+        font-size: 15px;
+    }
+
+    /* NOTES */
+
+    .input textarea {
+        min-height: 120px;
+
+        font-size: 15px;
+
+        padding:
+            18px
+            50px
+            18px
+            18px;
+    }
+
+    .input img {
+        width: 20px;
+
+        right: 15px;
+        bottom: 15px;
+    }
+
+}
+
+/* EXTRA SMALL DEVICES */
+
+@media (max-width: 480px) {
+
+    .textdiv h2 {
+        font-size: 28px;
+    }
+
+    .btndiv {
+        width: 50%;
+        justify-content: center;
+    }
+
+    .input textarea {
+        min-height: 110px;
+        font-size: 14px;
+    }
+
+}
